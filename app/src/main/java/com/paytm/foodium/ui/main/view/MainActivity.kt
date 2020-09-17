@@ -35,15 +35,6 @@ class MainActivity : BaseActivity() {
     override fun setUpObservers() {
         super.setUpObservers()
 
-        mainViewModel.foodPosts.observe(this, Observer {
-            when (val response = it) {
-                is Response.Success -> {
-                    for (food in response.output) {
-                        Log.v("sahil", "${food}")
-                    }
-                    foodAdapter.updateData(response.output)
-                }
-            }
-        })
+
     }
 }
