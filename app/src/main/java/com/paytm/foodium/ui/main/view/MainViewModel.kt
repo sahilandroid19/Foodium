@@ -68,10 +68,5 @@ class MainViewModel @ViewModelInject constructor(
     }
 
     private fun deleteDatabase() {
-        compositeDisposable.add(
-            mainDataRepository.deleteFoodListFromDatabase()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe())
     }
 }

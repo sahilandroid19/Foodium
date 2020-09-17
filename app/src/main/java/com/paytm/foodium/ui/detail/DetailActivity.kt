@@ -12,4 +12,16 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
     }
+
+    private fun hello() {
+
+    }
+
+    private fun bye() {
+
+    }
+
+    private fun rye() {
+
+    }
 }

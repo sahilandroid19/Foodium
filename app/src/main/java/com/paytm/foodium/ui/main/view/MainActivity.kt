@@ -26,16 +26,10 @@ class MainActivity : BaseActivity() {
         foodAdapter = FoodAdapter(ArrayList<Food>(), lifecycle)
         mainViewModel.getPost()
 
-        foodsListView.apply {
-            adapter = foodAdapter
-            layoutManager = LinearLayoutManager(this@MainActivity)
-        }
     }
 
     override fun setListeners() {
-        swipeRefreshLayout.setOnRefreshListener {
-            //TODO
-        }
+
     }
 
     override fun setUpObservers() {
