@@ -23,7 +23,7 @@ class MainActivity : BaseActivity() {
     override fun setActivityLayout(): Int = R.layout.activity_main
 
     override fun setView(savedInstanceState: Bundle?) {
-
+        mainViewModel.getPost()
 
     }
 
@@ -34,18 +34,6 @@ class MainActivity : BaseActivity() {
     override fun setUpObservers() {
         super.setUpObservers()
 
-
-    }
-
-    private fun first() {
-        Log.v("sahil", "First")
-    }
-
-    private fun firstMethod() {
-
-    }
-
-    private fun secondMethod() {
 
     }
 }
