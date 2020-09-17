@@ -10,20 +10,7 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
-        setSupportActionBar(findViewById(R.id.toolbar))
 
     }
 
-    private fun hello() {
-
-    }
-
-    private fun bye() {
-
-    }
-
-    private fun rye() {
-
-    }
 }

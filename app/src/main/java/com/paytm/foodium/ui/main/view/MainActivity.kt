@@ -23,8 +23,7 @@ class MainActivity : BaseActivity() {
     override fun setActivityLayout(): Int = R.layout.activity_main
 
     override fun setView(savedInstanceState: Bundle?) {
-        foodAdapter = FoodAdapter(ArrayList<Food>(), lifecycle)
-        mainViewModel.getPost()
+
 
     }
 
