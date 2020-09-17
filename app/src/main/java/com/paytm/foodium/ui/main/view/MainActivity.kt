@@ -23,7 +23,7 @@ class MainActivity : BaseActivity() {
     override fun setActivityLayout(): Int = R.layout.activity_main
 
     override fun setView(savedInstanceState: Bundle?) {
-
+        mainViewModel.getPost()
 
     }
 
