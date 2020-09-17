@@ -1,0 +1,55 @@
+package com.paytm.foodium.ui.main.view
+
+import android.os.Bundle
+import android.util.Log
+import androidx.activity.viewModels
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.paytm.foodium.R
+import com.paytm.foodium.data.remote.model.Food
+import com.paytm.foodium.data.remote.model.Response
+import com.paytm.foodium.ui.base.BaseActivity
+import com.paytm.foodium.ui.base.BaseViewModel
+import com.paytm.foodium.ui.main.adapter.FoodAdapter
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : BaseActivity() {
+
+    private val mainViewModel: MainViewModel by viewModels()
+
+    private lateinit var foodAdapter: FoodAdapter
+
+    override fun setActivityLayout(): Int = R.layout.activity_main
+
+    override fun setView(savedInstanceState: Bundle?) {
+        foodAdapter = FoodAdapter(ArrayList<Food>(), lifecycle)
+        mainViewModel.getPost()
+
+        foodsListView.apply {
+            adapter = foodAdapter
+            layoutManager = LinearLayoutManager(this@MainActivity)
+        }
+    }
+
+    override fun setListeners() {
+        swipeRefreshLayout.setOnRefreshListener {
+            //TODO
+        }
+    }
+
+    override fun setUpObservers() {
+        super.setUpObservers()
+
+        mainViewModel.foodPosts.observe(this, Observer {
+            when (val response = it) {
+                is Response.Success -> {
+                    for (food in response.output) {
+                        Log.v("sahil", "${food}")
+                    }
+                    foodAdapter.updateData(response.output)
+                }
+            }
+        })
+    }
+}
