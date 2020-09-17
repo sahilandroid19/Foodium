@@ -14,4 +14,16 @@ class DetailActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
     }
+
+    private fun hello() {
+
+    }
+
+    private fun bye() {
+
+    }
+
+    private fun rye() {
+
+    }
 }
