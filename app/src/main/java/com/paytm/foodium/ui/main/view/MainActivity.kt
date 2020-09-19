@@ -31,5 +31,9 @@ class MainActivity : BaseActivity() {
 
     }
 
+    override fun setUpObservers() {
+        super.setUpObservers()
 
+
+    }
 }
