@@ -13,15 +13,8 @@ class DetailActivity : AppCompatActivity() {
 
     }
 
-    private fun hello() {
+    private fun second() {
 
     }
 
-    private fun bye() {
-
-    }
-
-    private fun rye() {
-
-    }
 }
