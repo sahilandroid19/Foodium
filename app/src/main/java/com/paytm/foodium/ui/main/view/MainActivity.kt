@@ -54,4 +54,7 @@ class MainActivity : BaseActivity() {
 
     }
 
+    private fun secondMethod() {
+
+    }
 }
