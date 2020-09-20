@@ -13,4 +13,7 @@ class DetailActivity : AppCompatActivity() {
 
     }
 
+    private fun firstMethod() {
+
+    }
 }
