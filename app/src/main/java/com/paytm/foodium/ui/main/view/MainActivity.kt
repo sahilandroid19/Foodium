@@ -40,4 +40,8 @@ class MainActivity : BaseActivity() {
     private fun second() {
         Log.v("sahil", "Second")
     }
+
+    private fun second() {
+        Log.v("sahil", "Second")
+    }
 }
