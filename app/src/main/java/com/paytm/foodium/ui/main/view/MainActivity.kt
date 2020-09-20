@@ -41,7 +41,7 @@ class MainActivity : BaseActivity() {
         Log.v("sahil", "Second")
     }
 
-    private fun second() {
+    private fun seconds() {
         Log.v("sahil", "Second")
     }
 }
